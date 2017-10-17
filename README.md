@@ -1,3 +1,7 @@
+# AUTHORS #
++ Lukas August Kern
++ Stefan Elsenhuber
+
 # jsidiots-gulpfile
 ## A gulpfile.js for regular webdevelopers
 
