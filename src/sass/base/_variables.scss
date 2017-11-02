@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 
 // LAYOUT
-$padding: 1em;
+$padding: .5em;
 
 // BREAKPOINTS
 
@@ -10,8 +10,11 @@ $primary-color: #99bf0d;
 $white : #FFFFFF;
 $blue: #009EE0;
 $gray: #f6f6f6;
+$black: #000;
 $copy-color: #333;
 $yellow: #fae005;
 
-//FONTS BY GOOGLE
+//FONTS
 $main-font: 'Roboto Slab', serif;
+$title-size: 2.5em
+$button-size: 2em;

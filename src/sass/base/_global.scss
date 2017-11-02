@@ -5,28 +5,67 @@ html {
 
 header {
   padding: $padding;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+h1 {
+  background-color: $white;
+  color: $blue;
+  font-size: $title-size;
+  margin-bottom: 0;
 }
 
 a {
-  background-color: $white;
-  color: $blue;
-  font-size: 2.5em;
-  padding: .5 * $padding;
-}
+  text-decoration: none;
+  color: $black;
+  padding: 0 0.2em 0;
 
-ul {
-  float: right;
+  &:hover {
+    color: $blue;
+    border-bottom: solid;
+
+  }
+  &:active {
+    border-bottom: solid;
+  }
 }
 li {
   display: inline-block;
 }
 
-div#banner {
+section#banner {
   background:
-          url('images/front_keyboard.jpg')
-          no-repeat;
+    url('images/front_keyboard.jpg')
+    no-repeat;
   background-size: cover;
   height: 350px;
+
+  article {
+    color: $blue;
+    padding:2em;
+
+    span {
+      display: inline;
+      background: $white;
+      font-size: $title-size;
+      line-height: 1.5em;
+    }
+
+    button {
+      background-color: $blue;
+      border:none;
+      color: $white;
+      font-family: $main-font;
+      font-size: $button-size;
+    }
+  }
 }
 
 p {
