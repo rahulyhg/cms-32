@@ -45,12 +45,13 @@ section#banner {
     url('images/front_keyboard.jpg')
     no-repeat;
   background-size: cover;
-  height: 350px;
+  height: 320px;
 
   article {
     color: $blue;
     padding:2em;
-
+    width: 50%;
+    float: right;
     span {
       display: inline;
       background: $white;
@@ -59,11 +60,14 @@ section#banner {
     }
 
     button {
+      margin-top: 0.5em;
+      padding:0.5em 0.2em;
       background-color: $blue;
       border:none;
       color: $white;
       font-family: $main-font;
       font-size: $button-size;
+      border-radius: 0.1em;
     }
   }
 }
