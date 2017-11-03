@@ -78,7 +78,7 @@ section#banner {
       font-size: $button-size;
       border-radius: $border-radius;
       cursor: pointer;
-
+      display: flex;
       &:hover {
         background-color: $blue-hover;
       }
@@ -111,9 +111,14 @@ section.main {
     justify-content: space-around;
 
     div.leistung {
-      background-color: $gray;
-      display: flex;
+
+      background-color: $black;
+      padding: 2em;
+
       h3 {
+        font-size: $button-size;
+        display: flex;
+        justify-content: center;
         padding: 1em 0;
         color: $blue;
       }
