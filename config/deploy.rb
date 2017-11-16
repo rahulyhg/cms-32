@@ -6,7 +6,7 @@ set :domain, '165.227.146.118'
 set :deploy_to, '/var/www/html'
 set :repository, 'https://github.com/stefanelsat/cms'
 set :branch, 'master'
-set :user, 'cms'
+set :user, 'superuser'
 
 # shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 set :shared_dirs, fetch(:shared_dirs, []).push('wp-content/uploads', 'wp-content/gallery')
