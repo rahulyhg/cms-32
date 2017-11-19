@@ -1,1 +1,1 @@
-console.log("I go first!");
+console.log('I go first!')
