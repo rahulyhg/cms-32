@@ -26,6 +26,15 @@ h1 {
   margin-bottom: 0;
 }
 
+h2 {
+  color: $blue;
+  font-size: $sub-title-size;
+  padding: 1em 0;
+}
+
+h3 {
+  font-size: $button-size;
+}
 
 a {
   text-decoration: none;
@@ -40,6 +49,9 @@ a {
   &:active {
     border-bottom: solid;
   }
+}
+a.special {
+  color: $white;
 }
 li {
   display: inline-block;
@@ -79,6 +91,7 @@ section#banner {
       border-radius: $border-radius;
       cursor: pointer;
       display: flex;
+
       &:hover {
         background-color: $blue-hover;
       }
@@ -95,12 +108,6 @@ section.main {
   article {
     padding: 1.5em 0.5em;
 
-    h2 {
-      color: $blue;
-      font-size: $sub-title-size;
-      padding: 1em 0;
-    }
-
     div {
       border-radius: $border-radius;
     }
@@ -110,7 +117,7 @@ section.main {
     display: flex;
     justify-content: space-around;
 
-    div.leistung {
+    div {
       cursor: pointer;
       width: 30%;
       background-color: $gray;
@@ -120,7 +127,6 @@ section.main {
       }
 
       h3 {
-        font-size: $button-size;
         display: flex;
         justify-content: center;
         padding: 1em 0;
@@ -131,21 +137,30 @@ section.main {
         justify-content: center;
         width: 100%;
       }
-    }
-  }
-
-  article.news {
-    div.post {
-      height: 150px;
-      background-color: $gray;
+      
+      p.post {
+        font-family: $block-font;
+        line-height: 1.5em;
+      }
+      p.post:after {
+        font-weight: bold;
+        content: 'Lesen Sie mehr...';
+      }
     }
   }
 
 }
 
 footer {
+  display: flex;
+  justify-content:center;
+  align-items: center;
   background-color: $blue;
   height: 150px;
+
+  h3 {
+    color: $white;
+  }
 }
 
 p {
