@@ -171,48 +171,60 @@ p {
  */
 
 @media only screen and (max-width: 600px) {
-  nav {
-    display: none;
+  header {
+    background-color: $white;
+    position: fixed;
+    width:100%;
 
-    ul {
-      margin-top:2em;
-      li.active {
+    nav {
+      display: inline-block;
+
+      a#burger-menu {
         display: block;
+        float: right;
+        cursor: pointer;
+        border-bottom: none;
 
+        .row1, .row2, .row3 {
+          width: 35px;
+          height: 5px;
+          background-color: $blue;
+          margin: 6px 0;
+          border-radius: 5px;
+          transition: 0.4s;
+
+        }
+
+        .row1.change {
+          -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+          transform: rotate(-45deg) translate(-9px, 6px) ;
+        }
+
+        .row2.change {
+          opacity: 0;
+        }
+
+        .row3.change {
+          -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+          transform: rotate(45deg) translate(-8px, -8px) ;
+        }
+
+      }
+
+      ul {
+        display: none;
+        margin-top:2em;
+
+        li {
+          display: block;
+          font-size: $button-size;
+
+        }
       }
     }
   }
 
-  a#burger-menu {
-    display: block;
-    cursor: pointer;
-    border-bottom: none;
 
-    .row1, .row2, .row3 {
-      width: 35px;
-      height: 5px;
-      background-color: $blue;
-      margin: 6px 0;
-      border-radius: 5px;
-      transition: 0.4s;
-
-    }
-
-    .row1.change {
-      -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-      transform: rotate(-45deg) translate(-9px, 6px) ;
-    }
-
-    .row2.change {
-      opacity: 0;
-    }
-
-    .row3.change {
-      -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-      transform: rotate(45deg) translate(-8px, -8px) ;
-    }
-
-  }
   section.main {
     article {
       div#wrapper {
