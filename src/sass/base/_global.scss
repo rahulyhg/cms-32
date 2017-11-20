@@ -170,11 +170,13 @@ p {
  MEDIA QUERIES
  */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   header {
     background-color: $white;
     position: fixed;
     width:100%;
+    transition: height 2s;
+    max-height: 500px;
 
     nav {
       display: inline-block;
@@ -213,10 +215,13 @@ p {
 
       ul {
         display: none;
-        margin-top:2em;
+        margin: 2.5em 0;
 
         li {
           display: block;
+          text-align: right;
+          line-height: 1.5em;
+
           font-size: $button-size;
 
         }
@@ -224,6 +229,10 @@ p {
     }
   }
 
+  section#banner {
+    padding-top: 3em;
+    height: 420px;
+  }
 
   section.main {
     article {

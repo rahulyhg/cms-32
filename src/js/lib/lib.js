@@ -8,6 +8,7 @@ burgerIcon.addEventListener('click', function() {
     if(!child.classList.contains('change')) {
       child.classList += ' change'
       menu.style.display = 'inline-block'
+
     }
     else {
       child.classList.remove('change')
