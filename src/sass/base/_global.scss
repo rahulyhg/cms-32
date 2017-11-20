@@ -174,11 +174,20 @@ p {
 @media only screen and (max-width: 600px) {
   nav {
     display: none;
+
+    ul {
+      margin-top:2em;
+      li.active {
+        display: block;
+
+      }
+    }
   }
 
   a#burger-menu {
-    display: inline-block;
+    display: block;
     cursor: pointer;
+    border-bottom: none;
 
     .row1, .row2, .row3 {
       width: 35px;
@@ -187,22 +196,22 @@ p {
       margin: 6px 0;
       border-radius: 5px;
       transition: 0.4s;
+
     }
 
-    .change .row1 {
+    .row1.change {
       -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
       transform: rotate(-45deg) translate(-9px, 6px) ;
     }
 
-    .change .row2 {
+    .row2.change {
       opacity: 0;
     }
 
-    .change .row3 {
+    .row3.change {
       -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
       transform: rotate(45deg) translate(-8px, -8px) ;
     }
-
 
   }
   section.main {
