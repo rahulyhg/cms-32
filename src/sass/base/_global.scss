@@ -156,7 +156,7 @@ footer {
   justify-content:center;
   align-items: center;
   background-color: $blue;
-  height: 150px;
+  height: 60px;
 
   h3 {
     color: $white;
@@ -172,15 +172,51 @@ p {
  */
 
 @media only screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  a#burger-menu {
+    display: inline-block;
+    cursor: pointer;
+
+    .row1, .row2, .row3 {
+      width: 35px;
+      height: 5px;
+      background-color: $blue;
+      margin: 6px 0;
+      border-radius: 5px;
+      transition: 0.4s;
+    }
+
+    .change .row1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+      transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+
+    .change .row2 {
+      opacity: 0;
+    }
+
+    .change .row3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+      transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+
+
+  }
   section.main {
     article {
       div#wrapper {
         display: block;
+        text-align: center;
         div {
-          width: 100%;
+          width: 80%;
+          margin: 5vh auto;
         }
         img {
           max-width: 30%;
+          display: inline-block;
         }
       }
     }
