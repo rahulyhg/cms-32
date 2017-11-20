@@ -166,3 +166,25 @@ footer {
 p {
   padding-bottom: $padding;
 }
+
+/*
+ MEDIA QUERIES
+ */
+
+@media only screen and (max-width: 600px) {
+  section.main {
+    article {
+      div#wrapper {
+        display: block;
+        div {
+          width: 100%;
+        }
+        img {
+          max-width: 30%;
+        }
+      }
+    }
+
+  }
+
+}
