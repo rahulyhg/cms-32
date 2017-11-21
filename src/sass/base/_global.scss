@@ -184,6 +184,26 @@ p {
 /*
  MEDIA QUERIES
  */
+@media only screen and (max-width: 720px) {
+
+  section#banner {
+    padding-top: 5em;
+    height: 420px;
+    article {
+      padding:1em;
+      width: 50%;
+      span {
+        font-size: $sub-title-size;
+        line-height: 1.5em;
+      }
+      button{
+        font-size: $button-size;
+      }
+    }
+  }
+}
+
+
 
 @media only screen and (max-width: 650px) {
   header {
@@ -195,7 +215,7 @@ p {
       display: inline-block;
       max-height: 50px;
       transition: max-height .8s ease;
-      
+
 
       a#burger-menu {
         display: block;
@@ -252,17 +272,17 @@ p {
   }
 
   section#banner {
-    padding-top: 8em;
+    padding-top: 5.5em;
     height: 420px;
     article {
       padding:1em;
       width: 50%;
       span {
-        font-size: 1.5em;
+        font-size: $res-sub-title-size;
         line-height: 1.5em;
       }
       button{
-        font-size: 1em;
+        font-size: $res-button-size;
       }
     }
   }
@@ -284,5 +304,13 @@ p {
     }
 
   }
+  footer {
+    background-color: $blue;
+    height: 60px;
 
+    h3 {
+      color: $white;
+      font-size: 1em;
+    }
+  }
 }
