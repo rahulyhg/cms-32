@@ -17,6 +17,14 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+
+  ul {
+    display: block;
+
+    li {
+      display: inline-block;
+    }
+  }
 }
 
 h1 {
@@ -62,9 +70,7 @@ a.normal {
     transition: 0.4s;
   }
 }
-li {
-  display: inline-block;
-}
+
 
 /*
   FIRST SECTION
@@ -184,11 +190,12 @@ p {
     background-color: $white;
     position: fixed;
     width:100%;
-    transition: height 2s;
-    max-height: 500px;
 
     nav {
       display: inline-block;
+      max-height: 50px;
+      transition: max-height .8s ease;
+      
 
       a#burger-menu {
         display: block;
