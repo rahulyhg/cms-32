@@ -53,6 +53,15 @@ a {
 a.special {
   color: $white;
 }
+a.normal {
+  color: $blue;
+
+  &:hover {
+    border-bottom: none;
+    color: $blue-hover;
+    transition: 0.4s;
+  }
+}
 li {
   display: inline-block;
 }
@@ -209,6 +218,14 @@ p {
         .row3.change {
           -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
           transform: rotate(45deg) translate(-8px, -8px) ;
+        }
+
+      }
+
+      a#burger-menu:hover {
+
+        .row1, .row2, .row3 {
+          background-color: $blue-hover;
         }
 
       }
