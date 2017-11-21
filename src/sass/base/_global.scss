@@ -187,13 +187,13 @@ p {
 @media only screen and (max-width: 720px) {
 
   section#banner {
-    padding-top: 5em;
+    padding-top: 2em;
     height: 420px;
     article {
       padding:1em;
       width: 50%;
       span {
-        font-size: $sub-title-size;
+        font-size: $title-size;
         line-height: 1.5em;
       }
       button{
@@ -205,7 +205,7 @@ p {
 
 
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 640px) {
   header {
     background-color: $white;
     position: fixed;
@@ -273,7 +273,7 @@ p {
   }
 
   section#banner {
-    padding-top: 5.5em;
+    padding-top: 6em;
     height: 420px;
     article {
       padding:1em;
