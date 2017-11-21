@@ -20,6 +20,7 @@ nav {
 
   ul {
     display: block;
+    opacity: 1;
 
     li {
       display: inline-block;
@@ -209,7 +210,6 @@ p {
   header {
     background-color: $white;
     border-bottom: solid 3px $blue;
-
     position: fixed;
     width:100%;
 
@@ -260,7 +260,7 @@ p {
 
       ul {
         margin: 2.5em 0;
-        transition: opacity 0.5s;
+        transition: opacity 0.4s;
         opacity: 0;
 
         li {
