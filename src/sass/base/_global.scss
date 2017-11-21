@@ -247,9 +247,21 @@ p {
   }
 
   section#banner {
-    padding-top: 3em;
+    padding-top: 8em;
     height: 420px;
+    article {
+      padding:1em;
+      width: 50%;
+      span {
+        font-size: 1.5em;
+        line-height: 1.5em;
+      }
+      button{
+        font-size: 1em;
+      }
+    }
   }
+
 
   section.main {
     article {
@@ -261,7 +273,6 @@ p {
           margin: 5vh auto;
         }
         img {
-          max-width: 30%;
           display: inline-block;
         }
       }
