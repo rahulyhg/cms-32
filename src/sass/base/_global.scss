@@ -208,14 +208,15 @@ p {
 @media only screen and (max-width: 640px) {
   header {
     background-color: $white;
+    border-bottom: solid 3px $blue;
+
     position: fixed;
     width:100%;
 
     nav {
       display: inline-block;
-      max-height: 50px;
-      transition: max-height .8s ease;
-
+      height: 41px;
+      transition: height .8s ease;
 
       a#burger-menu {
         display: block;
@@ -258,9 +259,9 @@ p {
       }
 
       ul {
-        display: none;
         margin: 2.5em 0;
-        transition: display 5s;
+        transition: opacity 0.5s;
+        opacity: 0;
 
         li {
           display: block;
