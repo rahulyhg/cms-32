@@ -10,13 +10,11 @@ burgerIcon.addEventListener('click', function() {
       child.classList += ' change'
       menu.style.display = 'inline-block'
       nav.style.maxHeight = '550px'
-      console.log(menu.children)
     }
     else {
       child.classList.remove('change')
       menu.style.display = 'none'
       nav.style.maxHeight = '50px'
-
     }
 
   }

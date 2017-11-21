@@ -260,6 +260,7 @@ p {
       ul {
         display: none;
         margin: 2.5em 0;
+        transition: display 5s;
 
         li {
           display: block;
