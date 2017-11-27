@@ -173,7 +173,6 @@ footer {
   align-items: center;
   background-color: $blue;
   height: 60px;
-
   h3 {
     color: $white;
   }
@@ -183,6 +182,30 @@ p {
   padding-bottom: $padding;
 }
 
+
+
+/*
+about
+*/
+
+section#about {
+  background:
+    url('images/icons/user.svg')
+    no-repeat;
+  background-size: 320px;
+  background-position: center;
+  width: 100%;
+  height: 320px;
+  margin: 30px;
+}
+
+
+section{
+  article{
+    padding: 20vh;
+    color: $blue;
+  }
+}
 /*
  MEDIA QUERIES
  */
@@ -201,6 +224,22 @@ p {
       button{
         font-size: $button-size;
       }
+    }
+  }
+  section#about {
+    background:
+      url('images/icons/user.svg')
+      no-repeat;
+    background-size: 320px;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+  }
+  section{
+    article{
+      padding: 3em;
+      color: $blue;
     }
   }
 }
@@ -307,6 +346,7 @@ p {
     }
 
   }
+
   footer {
     background-color: $blue;
     height: 60px;
