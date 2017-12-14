@@ -8,9 +8,10 @@ TODO:
 
 -->
 
-<html lang="de">
+<html <?php language_attributes(); ?>>
 <head>
-  <meta charset="utf-8">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <?php wp_head(); ?>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="My name is Alex Sumner and I am a Web designer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,14 +31,13 @@ TODO:
   <meta name="msapplication-TileImage" content="images/icons-touch/ms-touch-icon-144x144-precomposed.png">
   <meta name="msapplication-TileColor" content="#3372DF">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
   <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
   <!--
   <link rel="canonical" href="http://www.example.com/">
   -->
 
 </head>
-<body>
+<body <?php body_class(); ?>>
 <!-- Add your site content here -->
 <header>
   <h1><a class="normal" href="#">Alex Sumner</a></h1>
@@ -47,13 +47,6 @@ TODO:
       <div class="row2"></div>
       <div class="row3"></div>
     </a>
-    <ul>
-      <li><a class="link" href="#">Start</a></li>
-      <li><a class="link" href="#leistungen">Leistungen</a></li>
-      <li><a class="link" href="#news">Blog</a></li>
-      <li><a class="link" href="#referenzen">Über mich</a></li>
-      <li><a class="link" href="#contact">Kontakt</a></li>
-    </ul>
+    <?php wp_nav_menu( array( 'top' => 'main-menu'  )  );?>
   </nav>
 </header>
-

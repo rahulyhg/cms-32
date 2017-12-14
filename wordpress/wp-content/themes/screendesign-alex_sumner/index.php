@@ -16,46 +16,87 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
-
-			<?php
-			// Start the loop.
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
-
-			// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
-				'next_text'          => __( 'Next page', 'twentyfifteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
-			) );
-
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
-
+<section id="banner">
+	<article>
+		<span>
+				Webdesign mit
+				Sinn und Zweck
+				und XYZ
+		</span>
+		<button onclick="void(0)">Angebot einholen</button>
+	</article>
+</section>
+<section class="main">
+	<article id="leistungen">
+		<h2>Leistungen</h2>
+		<div id="wrapper">
+			<div onclick="#" class="leistung">
+						<h3>Design</h3>
+						<img alt="design" src="<?php echo get_template_directory_uri(); ?>/images/icons/design.png" class="leistung">
+			</div>
+			<div class="leistung">
+						<h3>Strategie</h3>
+						<img alt="strategy" src="<?php echo get_template_directory_uri(); ?>/images/icons/strategy.png" class="leistung">
+			</div>
+			<div class="leistung">
+						<h3>Consulting</h3>
+						<img alt="consulting" src="<?php echo get_template_directory_uri(); ?>/images/icons/consulting.png" class="leistung">
+			</div>
+		</div>
+	</article>
+	<article id="news">
+		<h2>News</h2>
+		<div id = "wrapper">
+			<div>
+				<h3>Das Jugendwort des Jahres</h3>
+				<p class="post">Eine fachmännische Jury von fünf
+					77 jährigen pensionierten Bibliothekaren hat
+					nach langer Überlegung das Jugendwort des Jahres gewählt.
+				</p>
+			</div>
+			<div>
+				<h3>#MCMSGA</h3>
+				<p class="post">
+					Unter dem Hashtag "MCMSGA" (make content management
+					systems great again)
+					hat der erfahrene Webprogrammierer und Designer
+					@j_rubenz die Content Management Systeme mit dem
+					meisten swag für Sie zusammengefasst.
+				</p>
+			</div>
+			<div>
+				<h3>Kristina Schneider in Salzburg</h3>
+				<p class="post">
+					Vergangenes Wochenende war die renommierte UX
+					Designerin und CSS Enthusiastin Kristina Schneider
+					zu Gast an der FH Salzburg. Sie versuchte, mit ihrem
+					Know-How angehende Webpros für CSS zu begeistern.
+				</p>
+			</div>
+		</div>
+	</article>
+	<article id="referenzen">
+			<h2>Referenzen</h2>
+			<div id="wrapper">
+				<div onclick="#" class="leistung">
+					<h3>Fakebook</h3>
+					<img alt="fakebook" src="<?php echo get_template_directory_uri(); ?>/images/icons/Fakebook.jpeg" class="leistung">
+				</div>
+				<div class="leistung">
+					<h3>#MCMSGA</h3>
+					<img alt="MCMSGA" src="<?php echo get_template_directory_uri(); ?>/images/icons/CMSGA.jpeg" class="leistung">
+				</div>
+				<div class="leistung">
+					<h3>Mitter</h3>
+					<img alt="mitter" src="<?php echo get_template_directory_uri(); ?>/images/icons/Mitter.png" class="leistung">
+				</div>
+			</div>
+	</article>
+</section>
+<footer>
+		<h3>
+				&copy; <a title="Senden Sie mir eine Kontaktanfrage"
+						 class="special"
+						 href="mailto:alex@sumner-web.at">Alex Sumner</a>, Webdesigner zu Salzburg
+		</h3>
 <?php get_footer(); ?>
