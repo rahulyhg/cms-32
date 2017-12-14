@@ -1,9 +1,9 @@
 console.log('I go first!')
 
-const burgerIcon = document.getElementById('burger-menu')
-const nav = document.getElementsByTagName('nav')[0]
-const menu = document.getElementsByTagName('ul')[0]
-const links = document.getElementsByClassName('link')
+var burgerIcon = document.getElementById('burger-menu')
+var nav = document.getElementsByTagName('nav')[0]
+var menu = document.getElementsByTagName('ul')[0]
+var links = document.getElementsByClassName('link')
 
 
 // reset the burger menu when resizing at width > 640
@@ -14,7 +14,7 @@ window.addEventListener('resize', function () {
   else
     menu.style.opacity = '0'
 
-  for(let link of links) {
+  for (var link in links) {
     link.removeEventListener('click')
   }
 })
@@ -22,7 +22,7 @@ window.addEventListener('resize', function () {
 burgerIcon.addEventListener('click', function() {
   addEventCloseMenu()
 
-  for(let child of this.children) {
+  for (var child in this.children) {
     if(!child.classList.contains('change')) {
       child.classList += ' change'
       menu.style.opacity = '1'
@@ -38,9 +38,9 @@ burgerIcon.addEventListener('click', function() {
 })
 
 function addEventCloseMenu() {
-  for(let link of links) {
+  for (var link in links) {
     link.addEventListener('click', function() {
-      for(let child of burgerIcon.children) {
+      for(var child in burgerIcon.children) {
         child.classList.remove('change')
       }
       menu.style.opacity = '0'

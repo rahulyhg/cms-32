@@ -3,6 +3,7 @@ var dest = './wordpress/wp-content/themes/screendesign-alex_sumner';
 var notjssrc  = '!' + src + '/js/main.js';
 
 var gulp = require('gulp');
+var babel = require('gulp-babel');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
@@ -45,7 +46,9 @@ gulp.task('js', ['jslint'], function() {
 gulp.task('js-prod', ['jslint'], function() {
   // uglify JS 
   return gulp.src(src + '/js/main.js')
-    .pipe(uglify())
+    .pipe(uglify().on('error', function(e){
+            console.log(e);
+         }))
     .pipe(gulp.dest(dest + '/js/'));
 });
 
@@ -70,7 +73,13 @@ gulp.task('serve', ['sass'], function() {
 // preparing files for production
 gulp.task('prod', ['js-prod', 'sass-prod', 'copy-files-root', 'copy-files'], function() {
   console.log("\nTo minify and copy images, run the 'compress'-task.\n\n");
-});
+  } , () =>
+  gulp.src('src/js/lib/lib.js')
+          .pipe(babel({
+              presets: ['env']
+          }))
+          .pipe(gulp.dest(dest))
+);
 
 gulp.task('copy-files-root', function() {
   // but do not copy the dev's style.css and the sass folder
